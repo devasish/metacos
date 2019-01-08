@@ -71,22 +71,7 @@ class JobsController extends AppController {
                 if ($this->Job->saveAll($this->request->data)) {
                     $this->Session->setFlash(__('The job has been saved.'), 'flash_success');
                     $job_id = $this->Job->getLastInsertID();
-
-                    $jobDetails = $this->Job->findById($this->Job->getLastInsertID());
-
-                    $updateData = [
-                        'Job' => [
-                            'id' => $jobDetails['Job']['id'],
-                            'ref_no' => $this->Job->generateRefNo($jobDetails['User']['client_group'], $jobDetails['Job']['id']),
-                            'doc_no' => $this->Job->generateDocNo($jobDetails['User']['client_group'], $jobDetails['Job']['id']),
-                            'job_no' => $this->Job->generateJobNo($jobDetails['Job']['client']),
-                            'control_no' => $this->Job->generateJobControlNo($jobDetails['User']['client_group'], $jobDetails['Job']['id'])
-                        ]
-                    ];
-
-                    $this->Job->saveAll($updateData);
-
-                    return $this->redirect(array('controller' => $redirect_controller[0], 'action' => 'edit', $subject_id));
+                    return $this->redirect(array('action' => 'view', $job_id));
                 } else {
                     $this->Session->setFlash(__('The job could not be saved. Please, try again.'), 'flash_warning');
                 }
