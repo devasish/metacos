@@ -1,0 +1,119 @@
+.login-panel{
+    position: relative;
+    top: 100px;
+    left: 35%;    
+}
+.login-bg{	
+    background: url('../img/login-bg1.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.login{
+    text-align: left !important;
+}
+.welcome-text, .welcome-icon{
+	display: inline-block;
+}
+.help-block{
+	color: red;
+	font-size: 11px;
+}
+
+.print-hidden{
+    display: none;
+}
+.print-btn1{
+    position: absolute;
+    top: -50px;
+    right: 40px;
+    background: #FFF;
+    z-index: 999;
+    padding: 4px 15px;
+    border-radius: 3px;
+    color: #078a0d;
+}
+/* sidebar user profile */
+.sidebar .user {
+    padding-bottom: 20px;
+    margin: 20px auto 0;
+    position: relative;
+
+}
+.sidebar .user .photo {
+
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    float: left;
+    z-index: 5;
+    margin-right: 11px;
+    border-radius: 50%;
+    margin-left: 23px;
+    box-shadow: 0 16px 38px -12px rgba(0,0,0,.56),0 4px 25px 0 rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2);
+
+}
+.sidebar .user .photo img {
+
+    width: 100%;
+
+}
+.sidebar .user .user-info > a {
+
+    display: block;
+    line-height: 18px;
+    font-size: 14px;
+
+} 
+.sidebar .user a {
+
+    color: #3c4858;
+    padding: .5rem 15px;
+    white-space: nowrap;
+
+}
+.sidebar .caret {
+
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+
+}
+.user .user-info .caret {
+
+    position: absolute;
+    top: 8px;
+    right: 15px;
+
+}
+.sidebar .user .user-info > a > span {
+
+    display: block;
+    position: relative;
+    opacity: 1;
+
+}
+.sidebar .user::after {
+
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    height: 1px;
+    width: calc(100% - 30px);
+    background-color: rgba(180,180,180,.3);
+
+}
+.custom-edit-btn .material-icons{
+	font-size: 1.1rem;
+}
+.main-panel > .content{
+	margin-top: 0px !important;
+} 
